@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
   <title>Lupus in Tabula</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://www.dafontfree.net/embed/ZGV2aW5uZS10eHQtYnQtcmVndWxhciZkYXRhLzQ4L2QvNDE0MjUvRGVWaW5uZSBUeHQgQlQudHRm" rel="stylesheet" type="text/css"/>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-	<div class="page">
-		<img class="logo" src="img/logo.svg" alt=""/>
+	<img class="logo" src="img/logo.svg" alt=""/>
+	<div id="tabs">
+		<div class="bottoni">
+			<a type="button" data-dest="tab1">Regole Generali</a>
+			<a type="button" data-dest="tab2" class="selected">Ruoli Positivi</a>
+			<a type="button" data-dest="tab3">Ruoli Negativi</a>
+			<a type="button" data-dest="tab4">Altri Ruoli</a>
+		</div>
+		<div id="tabs-1" class="visible tab">
+			<section class="ruolox">
+				<img class="imgruolo" src="img/01.webp" alt="contadino"/>
+				<p class="ruolo"><span>Contadino</span></p>
+				<p class="descrizione">Sei un contadino, rimani a dormire tutta la notte, la mattina, invece, devi capire chi è il lupo e scegliere, assieme a tutti i vivi, chi linciare.</p>
+			</section>
+			<section class="ruolox">
+				<img class="imgruolo" src="img/04.webp" alt="contadino"/>
+				<p class="ruolo"><span>Veggente</span></p>
+				<p class="descrizione">Sei in grado di leggere le menti, ogni notte potrai sapere se la persona, ancora viva, che indicherai è o meno un lupo o vampiro. Giochi dalla parte dei contadini.</p>
+			</section>
+		</div>
 	</div>
 </body>
 <footer>
