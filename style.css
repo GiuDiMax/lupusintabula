@@ -71,7 +71,7 @@ body{
   color: #70341A;
 }
 
-.descrizione{
+.descrizione, .regolamento li, .regolamento ul{
 	font-family: Tower, serif;
 	font-size: 20px;
 	color: #604B2E;
@@ -183,6 +183,7 @@ body{
 	flex-direction: row;
 	justify-content: center;
 	gap: 40px;
+	column-gap: 20px;
 	flex-basis: 50%;
 	/*border-bottom: 2px solid #604B2E; */
 	padding-bottom: 8px;
@@ -224,15 +225,17 @@ body{
 	.ruolox{flex-basis: 100%;}
 	.ruolo{font-size: 18px; margin-top:0; margin-bottom:5px;}
 	.ruolo span::first-letter {font-size: 35px;}
-	.descrizione{font-size: 17px; line-height: 20px; margin-top:0;}
-	.cerchio {width: 20px;height: 20px;top:0px;}
+	.descrizione {font-size: 17px; line-height: 20px; margin-top:0;}
+	.regolamento li, .regolamento ul{font-size: 17px; line-height: 20px; margin-top:0;}
+	.cerchio {width: 20px;height: 20px;top:2px; }
 	.ruoloz{gap:15px;}
 	.imgruolo{width:120px;}
 	.tab, .tabb{row-gap:30px}
-	.bottone2{flex-basis:100%; gap: 10px;}
+	.bottone2{flex-basis:100%; gap: 20px;}
 	.line2{width:100%; margin: auto;}
 	.tabb{margin-bottom:0;}
 	.bottone2 .secondary{font-size: 30px;} 
 	.tab{row-gap: 20px !important;}
+	.bottone2 .material-symbols-rounded {font-size: 20px; top:2px; width: 20px; height: 20px;}
 }
 
