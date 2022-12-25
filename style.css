@@ -24,6 +24,7 @@ body{
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 100px;
 }
 
 .logo{
@@ -38,14 +39,14 @@ body{
 	margin-bottom: 50px;
 }
 
-.bottoni a{
+.bottoni .main, .bottone2 .secondary{
 	font-family: RumbleBrave, Helvetica, sans-serif;
 	font-size: 35px;
 	color: #604B2E;
 	cursor: pointer;
 }
 
-.bottoni .selected{
+.selected{
 	text-decoration-line: underline;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 4px;
@@ -85,16 +86,21 @@ body{
 	width: 150px;
 }
 
-.tab{
+.tab, .tabb{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	flex-basis: 100%;
 	justify-content: space-between;
-	row-gap: 40px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.tabb{
+	row-gap: 40px;
+	margin-bottom: 30px;
+	margin-top: 20px;
 }
 
 .ruolox{
@@ -150,6 +156,13 @@ body{
 	margin: 10px 0;
 }
 
+.line2{
+	height:2px;
+	width:50%;
+	margin: 10px 25%;
+	background-color: #604B2E; 
+}
+
 .regole{
 	font-size: 1.8em;
 	text-align: center;
@@ -165,19 +178,61 @@ body{
 	row-gap: 5px !important;
 }
 
+.bottone2{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 40px;
+	flex-basis: 50%;
+	/*border-bottom: 2px solid #604B2E; */
+	padding-bottom: 8px;
+	margin: auto;
+	cursor: pointer;
+}
+
+.bottone2 .secondary{
+	text-align: center;
+}
+
+.bottone2 .cerchio{
+	position: relative;
+	top: 7px;
+}
+
+.bottone2 .material-symbols-rounded{
+    font-size: 25px;
+	width: 25px;
+	height: 25px;
+    color: #c3ad82;
+    margin-top: 6px;
+	border-radius: 50%;
+	border: 5px solid #c3ad82;
+	background-color: #604B2E; 
+}
+
+.linkbig, .linkbig span{
+	text-decoration-line: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 7px;
+	text-decoration-color: #70341A;
+}
+
 @media only screen and (max-width: 800px) {
-	.bottoni a{
-		font-size: 25px;
-		line-height: 32px;
-	}
-	
+	body{width: 85%;}
+	.bottoni .main{line-height: 32px; font-size:30px;}
+	.bottoni{margin-top: 20px;}
 	.ruolox{flex-basis: 100%;}
-	.ruolo{font-size: 20px; margin-top:0; margin-bottom:5px;}
-	.ruolo span::first-letter {font-size: 40px;}
+	.ruolo{font-size: 18px; margin-top:0; margin-bottom:5px;}
+	.ruolo span::first-letter {font-size: 35px;}
 	.descrizione{font-size: 17px; line-height: 20px; margin-top:0;}
 	.cerchio {width: 20px;height: 20px;top:0px;}
 	.ruoloz{gap:15px;}
 	.imgruolo{width:120px;}
-	.tab{row-gap:30px}
+	.tab, .tabb{row-gap:30px}
+	.bottone2{flex-basis:100%; gap: 10px;}
+	.line2{width:100%; margin: auto;}
+	.tabb{margin-bottom:0;}
+	.bottone2 .secondary{font-size: 30px;} 
+	.tab{row-gap: 20px !important;}
 }
 

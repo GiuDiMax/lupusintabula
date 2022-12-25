@@ -1,162 +1,214 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <title>Lupus in Tabula</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-  <script src="script.js"></script>
+	<title>Lupus in Tabula</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,1,0" />
+	<script src="script.js"></script>
 </head>
 <body>
 	<img class="logo" src="img/logo.svg" alt=""/>
 	<div id="tabs">
 		<div class="bottoni">
-			<a type="button" data-dest="tab1" class="selected">Regole Generali</a>
-			<a type="button" data-dest="tab2">Ruoli Positivi</a>
-			<a type="button" data-dest="tab3">Ruoli Negativi</a>
-			<a type="button" data-dest="tab4">Altri Ruoli</a>
+			<a type="button" data-dest="tab1" class="main selected">Regole</a>
+			<a type="button" class="main" data-dest="tab2">Ruoli</a>
+			<a type="button" class="main" data-dest="tab3">Utilità</a>
 		</div>
 		<div id="tab1" class="tab regolamento">
 			<h4 class="ruolo regole"><span>Scopo del</span> <span>Gioco</span></h4>
 			<p class="descrizione">	Nel gioco ci sono <b>due fazioni</b>: quella dei <b>Lupi Mannari</b> e quella degli <b>Umani</b>. Lo scopo dei Lupi Mannari è di eliminare tutti gli umani. Viceversa quello degli umani è di linciare tutti i Lupi Mannari.</p>
 			<h4 class="ruolo regole"><span>Preparazione</span></h4>
-			<p class="descrizione">Scegliete il <b>Master</b>: egli non appartiene a nessuna fazione e gestisce solo la partita. Gli altri giocatori interpretano il ruolo dato dai gettoni/carte.</p>
+			<p class="descrizione">Scegliete il <b>Master</b>: egli non appartiene a nessuna fazione e gestisce solo la partita. Gli altri giocatori interpretano il ruolo dato dai gettoni/carte.
+			<br/>Componente il sacco dei ruoli come in seguito:
+			<ul>
+			<li>con <b>8 giocatori</b> (escluso il master) usate: 5 contadini, 2 lupi e il veggente;</li>
+			<li>
+			</ul>
+			</p>
 		</div>
-		<div id="tab2" class="tab hide">
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/01.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Contadino</span></p></div>
-				<p class="descrizione">Sei un contadino, rimani a dormire tutta la notte, la mattina, invece, devi capire chi è il lupo e scegliere, assieme a tutti i vivi, chi linciare.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/04.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Veggente</span></p></div>
-				<p class="descrizione">Sei in grado di leggere le menti, ogni notte potrai sapere se la persona, ancora viva, che indicherai è o meno un lupo o vampiro. Giochi dalla parte dei contadini.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/05.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Guardia</span></p></div>
-				<p class="descrizione">Ogni notte puoi scegliere di proteggere qualcuno a tua scelta tranne te stesso. Quel qualcuno sarà immune a qualunque tipo di attacco notturno per questa notte.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/03.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Massone</span></p></div>
-				<p class="descrizione">Sei un umano come gli altri però conosci l’identità degli altri massoni che ti verrà svelata nel corso della prima notte.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/06.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Meretrice</span></p></div>
-				<p class="descrizione">Durante la notte scegli una persona con cui trascorrere la notte, se dovessi essere bersaglio di un attacco ti salverai ma se il bersaglio è la persona che hai scelto, morirete entrambi. Se dovessi fare visita al killer o ad un lupo, morirai.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/13.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Medium</span></p></div>
-				<p class="descrizione">Sei in grado di metterti in contatto con i fantasmi, ogni notte ti verrà detto se la perona linciata era un lupo o no.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/14.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Ubriacone</span></p></div>
-				<p class="descrizione">Sei un normale contadino però alzi spesso il gomito, se i lupi ti sbraneranno, alla tua morte, a causa di tutto quell’alcool che hai in corpo, rimarranno storditi e per un turno non potranno sbranare nessuno.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/21.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Detective</span></p></div>
-				<p class="descrizione">Giochi come un normale contadino però di notte ti verrà detto il numero di lupi ancora in vita.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/17.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Osservatore</span></p></div>
-				<p class="descrizione">Giochi come normale contadino ma nel corso della prima notte ti verrà detto, se c’è, chi è il veggente.</p>
-			</section>
-			<section class="ruolox buono">
-				<img class="imgruolo" src="img/07.webp" alt="contadino"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Gufo</span></p></div>
-				<p class="descrizione">Sei il gufo, giochi dalla parte dei contadini. Ogni notte scegli una persona, quest’ultima verrà mandata automaticamente al ballottaggio.</p>
-			</section>
+		<div id="tab2" class="tab">
+			<div class="bottone2 buono chiuso" data-dest="tab2a">
+				<div class="cerchio"></div>
+				<span class="secondary" >Umani & Alleati</span>
+				<span class="material-symbols-rounded">add</span>
+			</div>
+			<div id="tab2a" class="tabb">
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/01.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Contadino</span></p></div>
+					<p class="descrizione">Sei un contadino e giochi dalla parte degli umani. Rimani a dormire tutta la notte, la mattina, invece, devi capire chi è il lupo e scegliere, assieme a tutti i vivi, chi linciare.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/04.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Veggente</span></p></div>
+					<p class="descrizione">Sei in grado di leggere le menti, ogni notte potrai sapere se la persona, ancora viva, che indicherai è o meno un lupo o vampiro. Giochi dalla parte degli umani.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/05.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Guardia</span></p></div>
+					<p class="descrizione">Sei un umano che ogni notte puoi scegliere di proteggere qualcuno a tua scelta tranne te stesso. Quel qualcuno sarà immune a qualunque tipo di attacco notturno per questa notte.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/03.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Massone</span></p></div>
+					<p class="descrizione">Sei un umano però conosci l’identità degli altri massoni che ti verrà svelata nel corso della prima notte.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/06.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Meretrice</span></p></div>
+					<p class="descrizione">Sei un'umana che durante la notte deve scegliere un giocatore con cui trascorrere la notte, se dovessi essere bersaglio di un attacco ti salverai ma, se il bersaglio dovesse essere la persona scelta, morirete entrambi. Se dovessi far visita al killer o ad un lupo, morirai.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/13.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Medium</span></p></div>
+					<p class="descrizione">Sei in grado di metterti in contatto con i fantasmi, ogni notte ti verrà detto se il giocatore appena linciato era un lupo o no.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/14.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Ubriacone</span></p></div>
+					<p class="descrizione">Sei un normale contadino però alzi spesso il gomito, se i lupi dovessero sbranarti, alla tua morte, a causa di tutto quell’alcool che hai in corpo, rimarranno storditi e per un turno non potranno sbranare nessuno.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/21.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Detective</span></p></div>
+					<p class="descrizione">Giochi come umano e di notte ti verrà detto il numero di lupi ancora in vita.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/17.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Osservatore</span></p></div>
+					<p class="descrizione">Giochi come umano ma nel corso della prima notte ti verrà detto, se c’è, chi è il veggente.</p>
+				</section>
+				<section class="ruolox buono">
+					<img class="imgruolo" src="img/07.webp" alt="contadino"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Gufo</span></p></div>
+					<p class="descrizione">Sei il gufo, giochi dalla parte degli umano. Ogni notte scegli un giocatore, quest’ultima verrà mandata automaticamente al ballottaggio.</p>
+				</section>
+			</div>
+			<div class="line2"></div>
+			<div class="bottone2 cattivo chiuso" data-dest="tab2b">
+				<div class="cerchio"></div>
+				<span class="secondary" >Lupi & Malvagi</span>
+				<span class="material-symbols-rounded">add</span>
+			</div>
+			<div id="tab2b" class="tabb">
+				<section class="ruolox cattivo">
+					<img class="imgruolo" src="img/02.webp" alt="lupo"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Lupo</span></p></div>
+					<p class="descrizione">Sei un lupo, devi essere cauto e non farti scoprire, il tuo compito è quello di far fuori tutti i contadini. Durante la notte, dopo aver riconosciuto gli altri lupi, se ci sono, dovrete scegliere assieme chi sbranare.</p>
+				</section>
+				<section class="ruolox cattivo">
+					<img class="imgruolo" src="img/08.webp" alt="lupo"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Indemoniato</span></p></div>
+					<p class="descrizione">Sei l’indemoniato, un umano a tutti gli effetti ma vinci se vincono i lupi, quindi giochi dalla loro parte anche senza sapere la loro identità.</p>
+				</section>
+				<section class="ruolox cattivo">
+					<img class="imgruolo" src="img/19.webp" alt="lupo"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Strega</span></p></div>
+					<p class="descrizione">Come il veggente hai la possibilità di sapere, nel corso della notte, se un giocatore è un lupo o meno, però giochi dalla parte dei lupi; non ti svegli quando si svegliano i lupi.</p>
+				</section>
+				<section class="ruolox cattivo">
+					<img class="imgruolo" src="img/18.webp" alt="lupo"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Mucca</span> <span>Mannara</span></p></div>
+					<p class="descrizione">Giochi dalla parte dei lupi, sapendo la loro identità (di notte il moderatore ti indicherà i lupi) ma non potrai scegliere con loro chi sbranare e loro non sapranno la tua identità.</p>
+				</section>
+			</div>
+			<div class="line2"></div>
+			<div class="bottone2 cattivo speciale" data-dest="tab2c">
+				<div class="cerchio"></div>
+				<span class="secondary" >Altri Ruoli</span>
+				<span class="material-symbols-rounded">add</span>
+			</div>
+			<div id="tab2c" class="tabb">
+				<section class="ruolox medio">
+					<img class="imgruolo" src="img/11.webp" alt="medio"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Maledetto</span></p></div>
+					<p class="descrizione">Giochi come umano finché un lupo non ti prova a sbranare, in tal caso diventerai uno di loro e ti sveglierai con loro dalla prossima notte. Se la guardia quella notte ti dovessere proteggere, non verrai trasformato.</p>
+				</section>
+				<section class="ruolox medio">
+					<img class="imgruolo" src="img/09.webp" alt="medio"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Sosia</span></p></div>
+					<p class="descrizione">
+					<b>v1</b> Nel corso della prima seconda sceglerai un giocatore, ti verrà detto se è un lupo o meno, qualora fosse un lupo ti unirai ai lupi, altrimenti giocherai da contadino.</p>
+					<div class="line"></div>
+					<p class="descrizione"><b>v2 </b>Nel corso della prima notte scglierai un giocatore, ti viene detto il suo ruolo, dopodiché svolgi la partita come normale contadino. Alla morte della persona designata ne assumerai il ruolo.</p>
+				</section>
+				<section class="ruolox speciale">
+					<img class="imgruolo" src="img/12.webp" alt="medio"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Cinico</span></p></div>
+					<p class="descrizione">Sei un umano a tutti gli effetti ma ami farti fare del male quindi l’unico modo per vincere sarà quello di farti linciare, sarai l'unico vincitore.</p>
+				</section>
+				<section class="ruolox speciale">
+					<img class="imgruolo" src="img/10.webp" alt="medio"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Criceto</span> <span>Mannaro</span></p></div>
+					<p class="descrizione">Non puoi essere sbranato dai lupi. Per il medium sarai un umano ma se ti indica il veggente (o ruoli simili) allora morirai. Sarai l’unico vincitore della partita se rimarrai vivo fino alla fine della partita.</p>
+				</section>
+				<section class="ruolox speciale">
+					<img class="imgruolo" src="img/20.webp" alt="medio"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Guardiano dell'</span><span>Ombra</span></p></div>
+					<p class="descrizione">
+					<b>v1</b> Come il veggente, hai la possibilità di sapere, ogni notte, se un giocatore è un lupo/vampiro o no. Vinci, da solo, nel caso in cui rimani vivo con un solo altro giocatore, lupo/vampiro o meno che sia. Se muori vincerai in caso di vittoria dei contadini.</p>
+					<div class="line"></div>
+					<p class="descrizione"><b>v2 </b>Puoi, a partire della seconda notte e solo una volta per partita, riportare in vita un giocatore.</p>
+				</section>
+				<section class="ruolox speciale">
+					<img class="imgruolo" src="img/16.webp" alt="medio"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Serial</span> <span>Killer</span></p></div>
+					<p class="descrizione">
+					<b>v1</b> Sei un killer solitario, vincerai soltanto se dovessi rimanere l’ultimo in vita. Ogni notte potrai scegliere chi uccidere. Se i lupi dovessero sbranarti ne morirà uno di questi casualmente e tu sopravvivrai.</p>
+					<div class="line"></div>
+					<p class="descrizione"><b>v2 </b>Sei un killer che gioca dalla parte dei contadini, una sola volta per partita, a partire dalla seconda notte, potrai scegliere un giocatore e ucciderlo.</p>
+				</section>
+				<section class="ruolox master">
+					<img class="imgruolo" src="img/15.webp" alt="medio"/>
+					<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Master</span></p></div>
+					<p class="descrizione">
+					<b>v1</b> Sei il narratore del gioco, non partecipi attivamente alla partita, ma dovrai soltanto narrare ciò che succede stando attento a prendere nota di tutto.</p>
+					<div class="line"></div>
+					<p class="descrizione"><b>v2 </b>Non essendo un ruolo utile alla partita, potete concordare dei poteri straordinari e utilizzarlo come ruolo giocante.</p>
+				</section>
+			</div>
+			<div class="line2"></div>
 		</div>
-		<div id="tab3" class="hide tab">
-			<section class="ruolox cattivo">
-				<img class="imgruolo" src="img/02.webp" alt="lupo"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Lupo</span></p></div>
-				<p class="descrizione">Sei un lupo, devi essere cauto e non farti scoprire, il tuo compito è quello di far fuori tutti i contadini. Durante la notte, dopo aver riconosciuto gli altri lupi, se ci sono, dovrete scegliere assieme chi sbranare.</p>
-			</section>
-			<section class="ruolox cattivo">
-				<img class="imgruolo" src="img/08.webp" alt="lupo"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Indemoniato</span></p></div>
-				<p class="descrizione">Sei l’indemoniato, un umano a tutti gli effetti ma vinci se vincono i lupi, quindi giochi dalla loro parte anche senza sapere la loro identità.</p>
-			</section>
-			<section class="ruolox cattivo">
-				<img class="imgruolo" src="img/19.webp" alt="lupo"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Strega</span></p></div>
-				<p class="descrizione">Come il veggente hai la possibilità di sapere, nel corso della notte, se un giocatore è un lupo o meno, però giochi dalla parte dei lupi; non ti svegli quando si svegliano i lupi.</p>
-			</section>
-			<section class="ruolox cattivo">
-				<img class="imgruolo" src="img/18.webp" alt="lupo"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Mucca</span> <span>Mannara</span></p></div>
-				<p class="descrizione">Giochi dalla parte dei lupi, sapendo la loro identità (di notte il moderatore ti indicherà i lupi) ma non potrai scegliere con loro chi sbranare e loro non sapranno la tua identità.</p>
-			</section>
 		</div>
-		<div id="tab4" class="hide tab">
-			<section class="ruolox medio">
-				<img class="imgruolo" src="img/11.webp" alt="medio"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Maledetto</span></p></div>
-				<p class="descrizione">Giochi come umano finché un lupo non ti prova a sbranare, in tal caso diventerai uno di loro e ti sveglierai con loro dalla prossima notte. Se la guardia quella notte ti protegge non verrai trasformato.</p>
-			</section>
-			<section class="ruolox medio">
-				<img class="imgruolo" src="img/09.webp" alt="medio"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Sosia</span></p></div>
-				<p class="descrizione">
-				<b>v1</b> Nel corso della prima seconda scegli una persona, ti verrà detto se è un lupo o meno, qualora fosse un lupo ti unirai ai lupi, altrimenti giocherai da contadino.</p>
-				<div class="line"></div>
-				<p class="descrizione"><b>v2 </b>Nel corso della prima notte scegli una persona, ti viene detto il suo ruolo, dopodiché svolgi la partita come normale contadino. Alla morte della persona designata ne assumerai il ruolo.</p>
-			</section>
-			<section class="ruolox speciale">
-				<img class="imgruolo" src="img/12.webp" alt="medio"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Cinico</span></p></div>
-				<p class="descrizione">Sei un umano a tutti gli effetti ma ami farti fare del male quindi l’unico modo per vincere sarà quello di farti linciare, sarai l'unico vincitore.</p>
-			</section>
-			<section class="ruolox speciale">
-				<img class="imgruolo" src="img/10.webp" alt="medio"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Criceto</span> <span>Mannaro</span></p></div>
-				<p class="descrizione">Non puoi essere sbranato dai lupi. Per il medium sarai un umano ma se ti indica il veggente (o ruoli simili) allora morirai. Sarai l’unico vincitore della partita se rimarrai vivo fino alla fine della partita.</p>
-			</section>
-			<section class="ruolox speciale">
-				<img class="imgruolo" src="img/20.webp" alt="medio"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Guardiano dell'</span><span>Ombra</span></p></div>
-				<p class="descrizione">
-				<b>v1</b> Come il veggente, hai la possibilità di sapere, ogni notte, se un giocatore è un lupo/vampiro o no. Vinci, da solo, nel caso in cui rimani vivo con un solo altro giocatore, lupo/vampiro o meno che sia. Se muori vincerai in caso di vittoria dei contadini.</p>
-				<div class="line"></div>
-				<p class="descrizione"><b>v2 </b>Puoi, a partire della seconda notte e solo una volta per partita, riportare in vita un giocatore.</p>
-			</section>
-			<section class="ruolox speciale">
-				<img class="imgruolo" src="img/16.webp" alt="medio"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Serial</span> <span>Killer</span></p></div>
-				<p class="descrizione">
-				<b>v1</b> Sei un killer solitario, vincerai soltanto se rimarrai l’ultimo in vita. Ogni notte potrai scegliere chi uccidere. Se i lupi dovessero sbranarti ne morirà uno di questi casualmente e tu sopravvivrai.</p>
-				<div class="line"></div>
-				<p class="descrizione"><b>v2 </b>Sei un killer che gioca dalla parte dei contadini, una sola volta per partita, a partire dalla seconda notte, potrai scegliere un giocatore e ucciderlo.</p>
-			</section>
-			<section class="ruolox master">
-				<img class="imgruolo" src="img/15.webp" alt="medio"/>
-				<div class="ruoloz"><div class="cerchio"></div><p class="ruolo"><span>Master</span></p></div>
-				<p class="descrizione">
-				<b>v1</b> Sei il narratore del gioco, non partecipi attivamente alla partita, ma dovrai soltanto narrare ciò che succede stando attento a prendere nota di tutto.</p>
-				<div class="line"></div>
-				<p class="descrizione"><b>v2 </b>Non essendo un ruolo utile alla partita, potete concordare dei poteri straordinari e utilizzarlo come ruolo giocante.</p>
-			</section>
+		<div id="tab3" class="tab regolamento">
+			<a href="resources/Lupus V5.0.pdf" target="_blank" class="ruolo regole linkbig"><span>Download</span> <span>Carte in</span> <span>PDF</span></a>
 		</div>
 	</div>
 <footer>
 <script>
-	$( document ).ready(function() {
-		$(".bottoni a").on('click', function(event){
-			$(".tab").addClass("hide");
+	$( window ).on("load", function() {
+		$(".tab").hide();
+		$(".tabb").hide();
+		$("#tab1").show();
+		
+		$(".bottoni .main").on('click', function(event){
+			$(".tab").hide();
 			$(".bottoni a").removeClass("selected");
 			$(this).addClass("selected");
-			$("#"+String($(this).data("dest"))).removeClass("hide");
+			$("#"+String($(this).data("dest"))).slideDown();
 		});
+		
+		$(".bottone2").on('click', function(event){
+			if ($(this).hasClass("chiuso")){
+				$("#"+String($(this).data("dest"))).slideDown();
+				$(this).children('.material-symbols-rounded').text("remove");
+				$(this).addClass("aperto");
+				$(this).removeClass("chiuso");
+			}
+			else{
+				$("#"+String($(this).data("dest"))).slideUp();
+				$(this).children('.material-symbols-rounded').text("add");
+				$(this).addClass("chiuso");
+				$(this).removeClass("aperto");
+			}
+			
+		});
+	
 	});
 </script>
 </footer>
